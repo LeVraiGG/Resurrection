@@ -1,0 +1,486 @@
+﻿#volet {
+    width: 12%;
+    height: auto;
+    padding: 1em;
+    padding-right: 2em;
+    background: #333;
+    position: fixed;
+    left: -13%;
+    top: 2em;
+    transition: all 0.5s ease-in;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 1em;
+}
+
+#volet:hover {
+    left: 0;
+}
+
+.listPuceNav {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.lienClicable:Active {
+    background-color: #333;
+}
+
+.lienClicable {
+    Text-decoration: none;
+    background-color: rgb(92, 89, 89);
+    margin: 0.5em;
+}
+
+.imgHdr {
+    display: block;
+    justify-items: center;
+    height: auto;
+    width: 15%;
+}
+
+.imgHdr img {
+    padding-left: 0.4em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    height: 200px;
+    width: auto;
+}
+
+div {
+    display: block;
+}
+
+.texteHeader {
+    flex: content;
+}
+
+#titleHeader, #txtHeader {
+    padding: 0;
+    margin: 0;
+    color: white;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#titleHeader {
+    padding-top: 0.25em;
+    font-size: 6em;
+    font-family:  "Spiegel" ;
+}
+
+#txtHeader {
+    font-size: 2em;
+    font-family:  "Spiegel" ;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    color: rgb(204, 6, 6);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgb(49, 40, 40);
+}
+
+.dropdown:hover {
+    font-style: italic;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(92, 89, 89);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-style: normal;
+}
+
+.dropdown-content a {
+    color: rgb(234, 238, 183);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(69, 68, 71);
+    font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*
+  CSS selon article sur les flexbox dans le lien ci-dessous
+  https://developer.mozilla.org/fr/docs/Web/CSS/Disposition_des_bo%C3%AEtes_flexibles_CSS/Utilisation_des_flexbox_en_CSS
+
+  adapté par J.-C. Stritt / avril 2017-18-19
+*/
+
+
+/* --- DECORATION --- */
+
+.imgPortrait {
+    border-radius: 50%;
+    max-width: 150px;
+    min-width: 150px;
+    height: auto;
+}
+
+body {
+    margin: 0; 
+    background-color: #999;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header,
+footer {
+    border-radius: 6px;
+}
+
+header {
+    display: flex;
+    background: rgb(32, 28, 83);
+    margin: 0em;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+article,
+nav,
+aside {
+    background: rgb(150, 150, 150);
+    z-index: -3; /* derrière l'image de fond */
+}
+
+footer {
+    background: rgb(32, 28, 83);
+    color: white;
+    font-size: 0.5em;
+}
+
+
+/* --- DECORATION --- */
+
+.container, .content {
+    /* crée un contexte flex pour ses enfants */
+    display: flex;
+    margin: auto;
+}
+
+.container {
+    flex-direction: column;
+    flex: 1;
+    /* toute la hauteur du viewport */
+    min-height: 100vh;
+    /*max-width: 80em;*/
+    text-align: left;
+}
+
+.content {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 0;
+    /* occupe la hauteur restante */
+}
+
+.flex2ElementMax {
+    flex: 33%;
+}
+
+section {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    position: relative;
+}
+
+.divOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75); /* Blanc avec 50% d'opacité */
+    z-index: -1; /* Placer devant l'image de fond mais derrière le texte */
+}
+
+.imgOverlay {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#img1Overlay {
+    background-image: url("../images/mobaMap.webp");
+}
+
+#img2Overlay {
+    background-image: url("../images/mobaCombat.jpg");
+}
+
+.invisible {
+    opacity: 0%;
+}
+
+nav {
+    margin: 0;
+    padding: 1em;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+article {
+    /* occupe la largeur restante */
+    flex: 15;
+    text-align: justify;
+    padding: 1em;
+}
+
+nav li h4 {
+    padding: 5%;
+    margin: 5%;
+}
+
+aside {
+    padding: 1em;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.separator {
+    height:2px;
+    border-width:0;
+    color:rgb(73, 73, 73);
+    background-color:rgb(73, 73, 73); 
+}
+
+.lblPortrait {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Responsive (fenêtres de moins de 640px) */
+
+.imgHome {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+    body {
+        padding: 0px;
+    }
+    nav,
+    aside {
+        min-width: 8em;
+    }
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+pre,
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    text-align: left;
+}
+
+.preForm {
+    font-size: 1em;
+    margin: 0%;
+    text-align: left;
+}
+
+.envoyer {
+    background-color: rgba(230, 230, 230, 0.479);
+}
+
+textarea,
+input {
+    background-color: rgb(223, 223, 223);
+}
+
+textarea:hover,
+input:hover,
+textarea:focus,
+input:focus {
+    background-color: rgb(194, 194, 194);
+}
+
+.envoyer {
+    background-color: rgb(194, 194, 194);
+}
+
+iframe {
+    border: red solid 1px;
+}
+
+#moins1,
+#moins2,
+.noScreen {
+    display: none;
+}
+
+.pSaut {
+    width: 40%;
+}
+
+p .imgSaut {
+    width: 100%;
+}
+
+#plus,
+#moins2 {
+    background-color: rgb(150, 150, 150);
+    color: blue;
+}
+
+#noScreen {
+    display: none;
+}
+
+.iframe {
+    height: 15%;
+    width: 85%;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        padding: 0px;
+    }
+    .content {
+        flex-direction: column;
+        /* affichage vertical */
+    }
+    nav,
+    aside {
+        width: auto;
+        /* pour écraser la valeur 10em */
+    }
+    nav,
+    aside,
+    article {
+        flex-basis: auto;
+        /* pour écraser la valeur 0, due au flex: 1 */
+    }
+    nav {
+        order: -1;
+        /* avec 0, nav reprend sa place */
+    }
+    #volet {
+        height: auto;
+        width: 6%;
+    }
+    #volet:hover {
+        width: 40%;
+        transition: all 0.3s ease-in;
+    }
+    .imgHdr,
+    #plus,
+    #moins2,
+    .imgSaut {
+        display: none;
+    }
+    form textarea,
+    #nomprenom,
+    #email,
+    #msg {
+        width: 75%;
+    }
+    form label,
+    form legend,
+    .envoyer {
+        font-size: 0.75em;
+    }
+    .imgHome {
+        width: 85%;
+    }
+    .iframe {
+        width: 100%;
+        height: 15%;
+    }
+    .pSaut {
+        width: 100%;
+        display: none;
+    }
+    #hiddenDivResponsive {
+        display: none;
+    }
+}
+
+article {
+    padding-left: 2.5em;
+}
+
+p, h1, h2, h3 {
+    padding-left: 2em;
+    padding-right: 2em;
+}

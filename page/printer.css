@@ -1,0 +1,203 @@
+﻿.lienClicable {
+    Text-decoration: none;
+    background-color: rgb(92, 89, 89);
+    margin: 0.5em;
+}
+
+.imgHdr {
+    display: block;
+    justify-items: center;
+    height: 10%;
+    width: 10%;
+}
+
+div {
+    display: block;
+}
+
+.texteHeader {
+    flex: auto;
+    padding-left: 1em;
+}
+
+
+/*
+  CSS selon article sur les flexbox dans le lien ci-dessous
+  https://developer.mozilla.org/fr/docs/Web/CSS/Disposition_des_bo%C3%AEtes_flexibles_CSS/Utilisation_des_flexbox_en_CSS
+
+  adapt� par J.-C. Stritt / avril 2017-18-19
+*/
+
+
+/* --- DECORATION --- */
+
+body {
+    margin: 0;
+    background-color: #999;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header,
+footer {
+    padding: 1em;
+    border-radius: 6px;
+}
+
+header {
+    display: flex;
+    background: rgb(116, 116, 116);
+    margin: 0em;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+article,
+nav,
+aside {
+    background: rgb(150, 150, 150);
+}
+
+footer {
+    background: rgb(71, 68, 68);
+}
+
+
+/* --- DECORATION --- */
+
+.container {
+    /* crée un contexte flex pour ses enfants */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: auto;
+    /* toute la hauteur du viewport */
+    min-height: 100vh;
+    max-width: 80em;
+    text-align: left;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    /* crée un contexte flex pour ses enfants */
+    flex-direction: row;
+    flex: 1 1 0;
+    /* occupe la hauteur restante */
+}
+
+article {
+    /* flex: 1; occupe la largeur restante */
+    flex: 15;
+    text-align: justify;
+    padding: 1em;
+}
+
+nav li h4 {
+    padding: 5%;
+    margin: 5%;
+}
+
+aside {
+    padding: 1em;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+    padding-left: 5%;
+    flex-wrap: wrap;
+}
+
+pre,
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    text-align: left;
+}
+
+.preForm {
+    font-size: 1em;
+    margin: 0%;
+    text-align: left;
+}
+
+.envoyer {
+    background-color: rgba(230, 230, 230, 0.479);
+}
+
+textarea,
+input {
+    background-color: rgb(223, 223, 223);
+}
+
+textarea:hover,
+input:hover,
+textarea:focus,
+input:focus {
+    background-color: rgb(194, 194, 194);
+}
+
+.envoyer {
+    background-color: rgb(194, 194, 194);
+}
+
+#moins1,
+#moins2 {
+    display: none;
+}
+
+.pSaut {
+    width: 40%;
+}
+
+p .imgSaut {
+    width: 100%;
+}
+
+#plus,
+#moins2 {
+    background-color: rgb(150, 150, 150);
+    color: blue;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 3cm;
+}
+
+nav,
+iframe,
+.noPrint,
+a,
+.imgSaut,
+form {
+    display: none;
+}
+
+.print {
+    display: inline;
+    text-decoration: none;
+    color: black;
+}
+
+#noScreen {
+    display: block;
+}
+
+iframe {
+    height: 12em;
+}
