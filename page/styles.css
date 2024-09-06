@@ -407,10 +407,21 @@ p .imgSaut {
     width: 85%;
 }
 
-iframe {
-    height: 100%;
-    width: 100%;
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
+
+iframe {
+    max-width: 100%;
+    max-height: 100%;
+    width: 80vw;
+    height: 45vw; /* Aspect ratio 16:9 */
+    border: none;
+}
+
 
 @media only screen and (max-width: 640px) {
     body {
